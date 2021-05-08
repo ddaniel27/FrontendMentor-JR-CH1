@@ -140,7 +140,7 @@ h1,h2,p{
     border-radius: 0 5rem 0 5rem;
     color: white;
 }
-.dark-section *{
+.dark-section .phone, .dark-section h2, .dark-section p{
     position: relative;
     bottom: 170px;
 }
@@ -252,4 +252,106 @@ nav .dropdown .dropbtn:hover::after{
 }
 .dropdown:hover .dropdown-content{
     display: block;
+}
+
+@media screen and (min-width:720px) {
+
+    .home{
+        background-image: url(images/bg-pattern-intro.svg), linear-gradient(90deg, var(--very-light-red-gradient) 10%, var(--light-red-gradient) 60%);
+        background-position: 20% 50%;
+        background-size: 2500px 2500px;
+    }
+    .home .header .menu-icon-label{
+        display: none;
+    }
+    .home nav{
+        align-items: flex-start;
+        background: none;
+        box-shadow: none;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+    }
+    .home .nav-menu{
+        display: flex;
+    }
+    .home .dropdown .dropbtn{
+        color: white;
+        min-width: 160px;
+    }
+    .home .dropdown .dropbtn::after{
+        content: url(images/icon-arrow-light.svg);
+    }
+    .home .login-button, .home .signup-button{
+        margin:0 7px;
+    }
+    .home .signup-button{
+        background: white;
+        color: var(--light-red);
+    }
+    .home .login-button{
+        background: none;
+        border: none;
+        color: white;
+    }
+    .home nav hr{
+        display: none;
+    }
+
+
+    .light-section .editor-img{
+        background-image: url(images/illustration-editor-desktop.svg);
+        background-position: 10rem;
+        background-size: 700px;
+        float: right;
+        min-height: 60vw;
+        min-width: 50vw;
+        position: relative;
+        bottom: 7rem;
+    }
+    .light-section .item-float{
+        text-align:left;
+    }
+
+    .dark-section{
+        max-height: 15vw;
+        min-width: 90vw;
+        display: flex;
+        margin:0;
+    }
+    .dark-section h2, .dark-section p{
+        align-self:center;
+        padding: 0;
+        text-align: left;
+        position: static;
+    }
+    .dark-section .phone-text{
+        align-self: center;
+    }
+    .dark-section .phone{
+        min-height: 100vw;
+        margin-left: 3rem;
+        width: 50vw;
+    }
+
+    .light-section .laptop{
+        background-image: url(images/illustration-laptop-desktop.svg);
+        background-position: -10rem 0%;
+        background-size: 700px;
+        float: left;
+        min-height: 150vh;
+        min-width: 50vw;
+    }
+    .light-section .float-laptop{
+        padding: 0;
+        margin: 6vw 0 6vw;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-around;
+        min-width: 100vw;
+    }
+
 }
