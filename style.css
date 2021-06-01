@@ -15,192 +15,65 @@
     padding: 0;
     outline: none;
 }
-section{
+body{
     text-align: center;
 }
-h1,h2,p{
-    font-family: 'Overpass', sans-serif;
-}
-/* HOME */
-.home{ 
-    background-image: url(images/bg-pattern-intro.svg), linear-gradient(145deg, var(--very-light-red-gradient) 0%, var(--light-red-gradient) 70%);
-    background-position: 35% 40%;
-    background-size: 1200px 1200px;
-    border-radius: 0 0 0 5rem;
+.main-section{
+    background-image: url(images/bg-pattern-intro.svg), linear-gradient(135deg, var(--very-light-red-gradient) 10%, var(--light-red-gradient) 70%);
+    background-position: 40% 50%;
+    background-size: 2000px 2000px;
+    border-radius: 0 0 0 64px;
     color: white;
 }
-.home .header{
+
+.header{
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 5vh 5vw;
+    padding: 5vh 7vw;
 }
-.home .header .logo{
-    height:40px;
-    width:101px;
+.logo{
+    background-image: url(images/logo.svg);
+    height: 40px;
+    width: 100px;
 }
-.home .header .menu-icon-label{
-    align-self: center;
-    height:18px;
-    width:32px;
+
+.mobile-menu{
+    height: 18px;
+    width: 30px;
 }
-.home .header .menu-icon{
+.nav-menu{
     display: none;
 }
-.home nav{
+.menu-icon{
     display: none;
 }
-.home .txt{
-    padding: 5vh 12vw;
+.hamburguer{
+    background-image: url(images/icon-hamburger.svg);
+    height: 18px;
+    width: 30px;
 }
-.home h1{
-    font-size: 2rem;
-}
-.home button{
-    border: 1px solid white;
-    border-radius: 2rem;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 700;
-    margin: 5vh 3vw 10vh;
-    padding: .8rem;
-}
-.home button:hover{
-    cursor: pointer;
-}
-.home .solid-button{
-    background-color: white;
-    color: var(--light-red);
-}
-.home .solid-button:hover{
-    border: var(--very-light-red);
-    background-color: var(--very-light-red);
-}
-.home .login-button{
-    background-color: white;
-    color: var(--very-dark-blue);
-    padding: .8rem 1.5rem;
-    margin-bottom: 0;
-    max-height: 3rem;
-}
-.home .signup-button{
-    background: linear-gradient(145deg, var(--very-light-red-gradient) 0%, var(--light-red-gradient) 70%);
-    color: white;
-    padding: .8rem 1.5rem;
-    margin-top: .7rem;
-    margin-bottom: 0;
-    max-height: 3rem;
-}
-.home .border-button{
-    background: none;
-    color: white;
-}
-.home .border-button:hover{
-    background-color: white;
-    color: var(--light-red);
-}
-.home .close{
+.close{
+    background-image: url(images/icon-close.svg);
+    background-position: center;
     display: none;
+    height: 18px;
+    width: 30px;
 }
-
-/* LIGHT SECTION */
-.light-section h2{
-    color: var(--very-dark-blue);
-    padding: 2vh 15vw;
-    margin: 5vh 0 0;
-}
-.light-section p{
-    padding: 1vh 10vw;
-    line-height: 1.5;
-}
-.light-section .for-phone{
-    margin-bottom: 20vh;
-}
-.light-section .editor-img{
-    background-image: url(images/illustration-editor-mobile.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0 auto;
-    height: 40vh;
-    width: 40vh;
-}
-.light-section .laptop{
-    background-image: url(images/illustration-laptop-mobile.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0 auto;
-    height: 30vh;
-    width: 40vh;
-}
-
-.dark-section{
-    background-color: var(--very-dark-gray-blue);
-    background-image: url(images/bg-pattern-circles.svg);
-    background-position: -5rem -15rem;
-    background-repeat: no-repeat;
-    background-size: 500px 500px;
-    border-radius: 0 5rem 0 5rem;
-    color: white;
-}
-.dark-section .phone, .dark-section h2, .dark-section p{
-    position: relative;
-    bottom: 170px;
-}
-.dark-section .phone{
-    background-image: url(images/illustration-phones.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0 auto;
-    height: 45vh;
-    width: 45vh;
-}
-.dark-section h2{
-    padding: 2vh 15vw;
-}
-.dark-section p{
-    padding: 1vh 10vw;
-    line-height: 1.5;
-}
-
-footer{
-    background-color: var(--very-dark-black-blue);
-    border-radius: 0 5rem 0 0;
-    text-align: center;
-}
-footer object{
-    padding: 4vh 0;
-}
-footer .category{
-    color:white;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Ubuntu', sans-serif;
-    justify-content: space-evenly;
-    padding: 2vh 0;
-}
-footer .category *{
-    padding: 1vh 0;
-}
-footer .category a{
-    color:var(--grayish-blue);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 300;
-}
-
-
-/* DROPDOWM LIST MOBILE */
 .menu-icon:checked + label .hamburguer{
     display: none;
 }
 .menu-icon:checked + label .close{
     display: block;
 }
-.menu-icon:checked ~ nav{
+.menu-icon:checked ~ .nav-menu{
     display: block;
 }
-nav{
+.nav-menu{
     background-color: white;
     border-radius: 8px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color:black;
     overflow: hidden;
     padding: 1rem;
     position:absolute;
@@ -208,13 +81,14 @@ nav{
     left: 20vw;
     width: 60vw;
 }
-nav .dropdown{
+.nav-menu .categories{
     overflow: hidden;
 }
-nav .dropdown .dropbtn{
+.nav-menu .categories .dropbtn{
     background-color: inherit;
     border: none;
     color: var(--very-dark-black-blue);
+    cursor: pointer;
     font-family: 'Overpass', sans-serif;
     font-size: 1rem;
     font-weight: bold;  
@@ -222,13 +96,19 @@ nav .dropdown .dropbtn{
     outline: none;
     padding: 14px 16px;
 }
-nav .dropdown .dropbtn::after{
+.nav-menu .categories .dropbtn::after{
     display: inline-block;
     content: url(images/icon-arrow-dark.svg);
     padding: 0 1vw;
 }
-nav .dropdown .dropbtn:hover::after{
+.nav-menu .categories .categories-item{
+    display: none;
+}
+.nav-menu .categories .categories-item:checked + label .dropbtn::after{
     transform: rotate(180deg);
+}
+.nav-menu .categories .categories-item:checked ~ .dropdown-content{
+    display: block;
 }
 .dropdown-content {
     background-color: var(--grayish-blue);
@@ -250,108 +130,308 @@ nav .dropdown .dropbtn:hover::after{
 .dropdown-content a:hover {
     background-color: #ddd;
 }
-.dropdown:hover .dropdown-content{
-    display: block;
+.desktop-use{
+    display: none;
 }
 
-@media screen and (min-width:720px) {
+hr{
+    border: 0;
+    border-top: 1px solid var(--grayish-blue);
+    margin: 2vh auto;
+}
+.login, .sign-up{
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.login{
+    background: none;
+    color: var(--very-dark-black-blue);
+}
+.sign-up{
+    background: linear-gradient(135deg, var(--very-light-red-gradient) 10%, var(--light-red-gradient) 70%);
+    color: white;
+    
+}
 
-    .home{
-        background-image: url(images/bg-pattern-intro.svg), linear-gradient(90deg, var(--very-light-red-gradient) 10%, var(--light-red-gradient) 60%);
-        background-position: 20% 50%;
-        background-size: 2500px 2500px;
+.title{
+    padding: 10vh 10vw 5vh;
+}
+h1,h2{
+    font-family: 'Overpass', sans-serif;
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+button{
+    border: 1px solid white;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 5px 5px 15vh;
+    padding: 1rem;
+    width: 160px;
+}
+.solid-button{
+    background-color: white;
+    color: var(--light-red-gradient);
+}
+.transparent-button{
+    background: none;
+    color: white;
+}
+
+
+.design-section{
+    margin: 15vh 0 30vh;
+}
+.design-image{
+    background-image: url(images/illustration-editor-mobile.svg);
+    height: 331px;
+    margin: 5vh auto -5vh;  
+}
+.design-section h2, .laptop-section h2{
+    color: var(--very-dark-blue);
+    margin: 5vh 3vw 2vh;
+}
+.design-section p, .laptop-section p{
+    color: var(--very-dark-grayish-blue);
+    margin: auto 6vw;
+}
+
+.phone-section{
+    background-image: url(images/bg-pattern-circles.svg), linear-gradient(153deg, rgba(44,45,63,1) 31%, rgba(63,65,100,1) 94%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0 64px;
+    color: white;
+}
+.phone-section::before{
+    content: "";
+    background: url(images/illustration-phones.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw 50vh;
+    display: block;
+    height: 50vh;
+    margin: 0 auto -30vh;
+    position: relative;
+    bottom: 25vh;
+    width: 100vw;
+}
+.phone-section h2{
+    margin: 5vh 3vw 2vh;
+}
+.phone-section p{
+    color: var(--grayish-blue);
+    margin: auto 6vw;
+    padding-bottom: 10vh;
+}
+
+.laptop-image{
+    background-image: url(images/illustration-laptop-mobile.svg);
+    height: 359px;
+    margin: 5vh auto -10vh;
+}
+.design-image, .laptop-image{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 95vw;
+}
+.footer{
+    background-color: var(--very-dark-black-blue);
+    border-radius: 0 64px 0 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+.footer .logo{
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    margin: 5vh auto;
+    padding: 5vh 0 0;
+}
+.footer .footer-section{
+    display: flex;
+    flex-direction: column;
+}
+.footer .footer-section h3{
+    color:white;
+    padding: 2vh 0;
+}
+.footer a{
+    color: var(--grayish-blue);
+    padding: 1vh 0;
+    text-decoration: none;
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+.attribution{
+    color:white;
+    padding: 2vh 0;
+}
+
+
+@media (min-width:650px) {
+    .header{
+        align-items: flex-start;
+        justify-content: left;
     }
-    .home .header .menu-icon-label{
+    .mobile-menu .mobile-label{
         display: none;
     }
-    .home nav{
-        align-items: flex-start;
+    .mobile-menu .nav-menu{
+        align-items: center;
+        display: flex;
+        position: inherit;
         background: none;
         box-shadow: none;
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        top: 0;
+        padding: 0;
+        width: 80vw;
     }
-    .home .nav-menu{
-        display: flex;
-    }
-    .home .dropdown .dropbtn{
-        color: white;
+    .mobile-menu .nav-menu .categories .dropbtn{
+        color: rgb(223, 223, 223);
+        margin: 0 10px;
         min-width: 160px;
+        padding: 0;
     }
-    .home .dropdown .dropbtn::after{
+    .mobile-menu .nav-menu .categories .dropbtn::after{
         content: url(images/icon-arrow-light.svg);
     }
-    .home .login-button, .home .signup-button{
-        margin:0 7px;
-    }
-    .home .signup-button{
-        background: white;
-        color: var(--light-red);
-    }
-    .home .login-button{
-        background: none;
-        border: none;
-        color: white;
-    }
-    .home nav hr{
+    .nav-menu .categories label{
         display: none;
     }
-
-
-    .light-section .editor-img{
-        background-image: url(images/illustration-editor-desktop.svg);
-        background-position: 10rem;
-        background-size: 700px;
-        float: right;
-        min-height: 60vw;
-        min-width: 50vw;
+    .nav-menu .categories .desktop-use{
+        display: block;
+    }
+    .nav-menu .categories:hover .dropbtn{
+        color: white;
+        text-decoration: underline;
+    }
+    .nav-menu .categories:hover .dropbtn::after{
+        transform: rotate(180deg);
+    }
+    .nav-menu .categories .dropdown-content{
+        background-color: white;
+    }
+    .nav-menu .categories:hover .dropdown-content{
+        display: block;
+        position:absolute;
+    }
+    .nav-menu .categories .dropdown-content a:hover{
+        background-color: white;
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+    }
+    .login, .sign-up{
+        border: none;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1rem;
+        /* padding:10px; */
+    }
+    .login{
+        color: rgb(223, 223, 223);
+    }
+    .sign-up{
+        background: white;
+        color: var(--light-red-gradient);
+    }
+    .sign-up:hover,.solid-button:hover{
+        background: var(--very-light-red);
+        color:white;
+    }
+    .solid-button:hover{
+        border-color: var(--very-light-red);
+    }
+    .transparent-button:hover{
+        background-color:white;
+        color: var(--light-red);
+    }
+    h1{
+        font-size:3.5rem;
+    }
+    .design-section h2, .phone-section h2, .laptop-section h2{
+        margin: 5vh 6vw 2vh;
+    }
+    .design-section, .laptop-section{
+        margin: 5vh 0;
+    }
+    #design-title{
         position: relative;
-        bottom: 7rem;
-    }
-    .light-section .item-float{
-        text-align:left;
-    }
-
-    .dark-section{
-        max-height: 15vw;
-        min-width: 90vw;
-        display: flex;
+        top:12vh;
         margin:0;
     }
-    .dark-section h2, .dark-section p{
-        align-self:center;
-        padding: 0;
-        text-align: left;
-        position: static;
+    .content-design, .laptop-section{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
     }
-    .dark-section .phone-text{
+    .design-image{
+        background-image: url(images/illustration-editor-desktop.svg);
+        background-size: contain;
+        background-position: left;
+        height: 882px;
+        width: 100%;
+        grid-column: 2;
+        grid-row: 1;
+        margin:0;
+    }
+    .design-text{
+        align-self: center;
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+    }
+    
+    .phone-section{
+        background-size: initial;
+        background-position:-10% 80%;
+        display: flex;
+        text-align: left;
+    }
+    .phone-section::before{
+        background-size: 90% 80vh;
+        background-position: center;
+        height: 80vh;
+        position: relative;
+        bottom: 15vh;
+    }
+    .phone-section .phone-text{
         align-self: center;
     }
-    .dark-section .phone{
-        min-height: 100vw;
-        margin-left: 3rem;
-        width: 50vw;
-    }
-
-    .light-section .laptop{
+    .laptop-image{
         background-image: url(images/illustration-laptop-desktop.svg);
-        background-position: -10rem 0%;
-        background-size: 700px;
-        float: left;
-        min-height: 150vh;
-        min-width: 50vw;
+        height: 786px;
+        margin:0;
+        width: 100%;
     }
-    .light-section .float-laptop{
-        padding: 0;
-        margin: 6vw 0 6vw;
+    .laptop-text{
+        align-self: center;
+        text-align: left;
     }
-
-    footer{
+    .footer{
+        align-items: flex-start;
         display: flex;
-        justify-content: space-around;
-        min-width: 100vw;
+        justify-content: space-evenly;
     }
-
+    .footer .logo{
+        margin:0;
+    }
+    .footer-section{
+        margin: 5vh 0;
+    }
+    .attribution{
+        align-self: flex-end;
+        display:inline;
+        position: absolute;
+    }
 }
